@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Flashcard({ flashcard }: {flashcard:any}) {
+function Flashcard({ card }: {card:any}) {
+  console.log(card);
+  console.log('hi');
   return (
     <div>
-      {flashcard.front}
-      {flashcard.back}
+      {card.front}
+      {card.back}
     </div>
   );
 }

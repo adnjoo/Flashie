@@ -1,0 +1,12 @@
+[
+    {
+        "front": "What is a stack?",
+        "back": "Its a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).",
+        "cardset":"DS&A"
+    },
+    {
+        "front": "What is a graph?",
+        "back": "A Graph is a non-linear data structure consisting of nodes and edges.",
+        "cardset":"DS&A"
+    }
+]

@@ -23,7 +23,7 @@ const pool = new Pool({
 
 
 const test = (req, res) => {
-  res.status(200).send("Testing Zen API");
+  res.status(200).send("Testing Flashie API");
 };
 
 module.exports = {
