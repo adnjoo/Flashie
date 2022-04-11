@@ -1,0 +1,18 @@
+[
+    {
+        "front": "What is the Big O for Quicksort; what is the key process for Quicksort?",
+        "back": "Its O(n log n); the key process in QS is partition()",
+        "cardset":"algorithms",
+        "image_url": "https://www.geeksforgeeks.org/wp-content/uploads/gq/2014/01/QuickSort2.png"
+    },
+    {
+        "front": "What is a graph?",
+        "back": "A Graph is a non-linear data structure consisting of nodes and edges.",
+        "cardset":"algorithms"
+    },
+    {
+        "front": "What is DP?",
+        "back": "Dynamic Programming is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for same inputs, we can optimize it using Dynamic Programming.",
+        "cardset":"algorithms"
+    }
+]

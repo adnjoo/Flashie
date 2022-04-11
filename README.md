@@ -1,11 +1,11 @@
-# CRA ts
+# Flashie
+
+> Learning through flash cards
 
 Quick Start
 
 ```
-cd client
-npm install
-npm start
+npm run dev
 ```
 
 
