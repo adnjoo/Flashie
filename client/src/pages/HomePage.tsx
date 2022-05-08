@@ -5,22 +5,19 @@ import Navigation from '../components/Navigation';
 
 function HomePage() {
   const [apiData, setApiData] = useState([]);
-  const f = async () => {
-    const { data } = await axios.get('http://localhost:4001/getcards');
-    setApiData(data);
-  };
   useEffect(() => {
-    f();
+    (async () => {
+      const { data } = await axios.get('http://localhost:4001/getcards');
+      setApiData(data);
+    })();
   }, []);
-  useEffect(() => {
-    console.log(apiData);
-  }, [apiData]);
   return (
     <div>
       <Navigation />
       HomePage
-      hi
-      {apiData.length > 0 && apiData?.map((ele) => <Flashcard card={ele} />)}
+      <div className="container m-auto">
+        {apiData.length > 0 && apiData?.map((ele) => <Flashcard card={ele} />)}
+      </div>
     </div>
   );
 }
