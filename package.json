@@ -3,8 +3,8 @@
     "concurrently": "^7.1.0"
   },
   "scripts": {
-    "client:dev": "cd client && npm start",
-    "server:dev": "cd server && nodemon start server.js",
+    "client:dev": "cd client && npm i && npm start",
+    "server:dev": "cd server && npm i && nodemon start server.js",
     "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\""
   }
 }

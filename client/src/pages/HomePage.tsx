@@ -14,8 +14,7 @@ function HomePage() {
   return (
     <div>
       <Navigation />
-      HomePage
-      <div className="container m-auto">
+      <div className="container m-auto mt-5">
         {apiData.length > 0 && apiData?.map((ele) => <Flashcard card={ele} />)}
       </div>
     </div>
