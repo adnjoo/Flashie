@@ -1,24 +1,30 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 // @ts-ignore
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 // @ts-ignore
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
-
-const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Your Library', href: '/library', current: false },
-  { name: 'Create', href: '/create', current: false },
-//   { name: 'Calendar', href: '#', current: false },
-];
 
 function classNames(...classes:any) {
   return classes.filter(Boolean).join(' ');
 }
 
 export default function Navigation() {
+  // eslint-disable-next-line no-unused-vars
+  const [url, setUrl] = useState(window.location.pathname.replace(/^\//, ''));
+  // eslint-disable-next-line no-unused-vars
+  const [navigation, setNavigation] = useState([
+    { name: 'Home', href: '/', current: true },
+    { name: 'Your Library', href: 'library', current: false },
+    { name: 'Create', href: 'create', current: false },
+  ]);
+  useEffect(() => {
+    if (url) {
+      setNavigation(navigation.map((item) => ({ ...item, current: item.href === url })));
+    }
+  }, [url]);
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-600">
       {({ open }:{ open:any }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
