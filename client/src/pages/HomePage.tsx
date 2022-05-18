@@ -1,24 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import Flashcard from '../components/FlashCard';
-import Navigation from '../components/Navigation';
+import React from 'react';
 
-function HomePage() {
-  const [apiData, setApiData] = useState([]);
-  useEffect(() => {
-    (async () => {
-      const { data } = await axios.get('http://localhost:4001/getcards');
-      setApiData(data);
-    })();
-  }, []);
+export default function HomePage() {
   return (
-    <div>
-      <Navigation />
-      <div className="container m-auto mt-5">
-        {apiData.length > 0 && apiData?.map((ele) => <Flashcard card={ele} />)}
-      </div>
-    </div>
+    <div>HomePage</div>
   );
 }
-
-export default HomePage;
